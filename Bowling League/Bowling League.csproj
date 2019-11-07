@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -45,14 +60,152 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BL_DBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BL_DBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_DBEquiposDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BL_DBEquiposDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_Juegosxsemana.cs">
+      <DependentUpon>BL_Juegosxsemana.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_Juegosxsemana.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BL_Juegosxsemana.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_LigasDetalles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BL_LigasDetalles.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_LigasDS.cs">
+      <DependentUpon>BL_LigasDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_LigasDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BL_LigasDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BL_RolesDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BL_RolesDS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormEquipos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormEquipos.Designer.cs">
+      <DependentUpon>FormEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJuegosxsemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJuegosxsemana.Designer.cs">
+      <DependentUpon>FormJuegosxsemana.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJugadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJugadores.Designer.cs">
+      <DependentUpon>FormJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLigasDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLigasDetalles.Designer.cs">
+      <DependentUpon>FormLigasDetalles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevaLiga.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevaLiga.Designer.cs">
+      <DependentUpon>FormNuevaLiga.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoEquipo.Designer.cs">
+      <DependentUpon>FormNuevoEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevoJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevoJugador.Designer.cs">
+      <DependentUpon>FormNuevoJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRoles.Designer.cs">
+      <DependentUpon>FormRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeleccionarEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeleccionarEquipo.Designer.cs">
+      <DependentUpon>FormSeleccionarEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSeleccionarJugador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSeleccionarJugador.Designer.cs">
+      <DependentUpon>FormSeleccionarJugador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormEquipos.resx">
+      <DependentUpon>FormEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJuegosxsemana.resx">
+      <DependentUpon>FormJuegosxsemana.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJugadores.resx">
+      <DependentUpon>FormJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLigasDetalles.resx">
+      <DependentUpon>FormLigasDetalles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevaLiga.resx">
+      <DependentUpon>FormNuevaLiga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoEquipo.resx">
+      <DependentUpon>FormNuevoEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevoJugador.resx">
+      <DependentUpon>FormNuevoJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRoles.resx">
+      <DependentUpon>FormRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeleccionarEquipo.resx">
+      <DependentUpon>FormSeleccionarEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSeleccionarJugador.resx">
+      <DependentUpon>FormSeleccionarJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +214,74 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="BL_DBDataSet.xsc">
+      <DependentUpon>BL_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BL_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BL_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BL_DBDataSet.xss">
+      <DependentUpon>BL_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BL_DBEquiposDS.xsc">
+      <DependentUpon>BL_DBEquiposDS.xsd</DependentUpon>
+    </None>
+    <None Include="BL_DBEquiposDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BL_DBEquiposDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BL_DBEquiposDS.xss">
+      <DependentUpon>BL_DBEquiposDS.xsd</DependentUpon>
+    </None>
+    <None Include="BL_Juegosxsemana.xsc">
+      <DependentUpon>BL_Juegosxsemana.xsd</DependentUpon>
+    </None>
+    <None Include="BL_Juegosxsemana.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BL_Juegosxsemana.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BL_Juegosxsemana.xss">
+      <DependentUpon>BL_Juegosxsemana.xsd</DependentUpon>
+    </None>
+    <None Include="BL_LigasDetalles.xsc">
+      <DependentUpon>BL_LigasDetalles.xsd</DependentUpon>
+    </None>
+    <None Include="BL_LigasDetalles.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BL_LigasDetalles.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BL_LigasDetalles.xss">
+      <DependentUpon>BL_LigasDetalles.xsd</DependentUpon>
+    </None>
+    <None Include="BL_LigasDS.xsc">
+      <DependentUpon>BL_LigasDS.xsd</DependentUpon>
+    </None>
+    <None Include="BL_LigasDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BL_LigasDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BL_LigasDS.xss">
+      <DependentUpon>BL_LigasDS.xsd</DependentUpon>
+    </None>
+    <None Include="BL_RolesDS.xsc">
+      <DependentUpon>BL_RolesDS.xsd</DependentUpon>
+    </None>
+    <None Include="BL_RolesDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BL_RolesDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BL_RolesDS.xss">
+      <DependentUpon>BL_RolesDS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +294,31 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logout.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="adduser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="addteam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

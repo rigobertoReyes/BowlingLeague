@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BL_LigasDS" targetNamespace="http://tempuri.org/BL_LigasDS.xsd" xmlns:mstns="http://tempuri.org/BL_LigasDS.xsd" xmlns="http://tempuri.org/BL_LigasDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BL_DBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BL_DBConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Bowling_League.Properties.Settings.GlobalReference.Default.BL_DBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="LigasTableAdapter" GeneratorDataComponentClassName="LigasTableAdapter" Name="Ligas" UserDataComponentName="LigasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Ligas.Id_Liga, Ligas.Nombre_de_liga, j.Nombre + ' ' + j.ApellidoPaterno + ' ' + j.ApellidoMaterno AS NPresidente, j2.Nombre + ' ' + j2.ApellidoPaterno + ' ' + j2.ApellidoMaterno AS NTesorero, 
+                         j3.Nombre + ' ' + j3.ApellidoPaterno + ' ' + j3.ApellidoMaterno AS NSecretario, Ligas.NombreBoliche, Ligas.CiudadJuego, Ligas.FechaInicio, Ligas.FechaFinal, Ligas.HoraJuego, Ligas.IndividualOEquipo, Ligas.CantidadEquipos, 
+                         Ligas.NombrePresidente, Ligas.NombreTesorero, Ligas.NombreSecretarioGral
+FROM            Ligas INNER JOIN
+                         Jugadores AS j ON Ligas.NombrePresidente = j.Id_Jugador INNER JOIN
+                         Jugadores AS j2 ON Ligas.NombreTesorero = j2.Id_Jugador INNER JOIN
+                         Jugadores AS j3 ON Ligas.NombreSecretarioGral = j3.Id_Jugador</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id_Liga" DataSetColumn="Id_Liga" />
+              <Mapping SourceColumn="Nombre_de_liga" DataSetColumn="Nombre_de_liga" />
+              <Mapping SourceColumn="NombreBoliche" DataSetColumn="NombreBoliche" />
+              <Mapping SourceColumn="CiudadJuego" DataSetColumn="CiudadJuego" />
+              <Mapping SourceColumn="FechaInicio" DataSetColumn="FechaInicio" />
+              <Mapping SourceColumn="FechaFinal" DataSetColumn="FechaFinal" />
+              <Mapping SourceColumn="HoraJuego" DataSetColumn="HoraJuego" />
+              <Mapping SourceColumn="IndividualOEquipo" DataSetColumn="IndividualOEquipo" />
+              <Mapping SourceColumn="CantidadEquipos" DataSetColumn="CantidadEquipos" />
+              <Mapping SourceColumn="NPresidente" DataSetColumn="NPresidente" />
+              <Mapping SourceColumn="NTesorero" DataSetColumn="NTesorero" />
+              <Mapping SourceColumn="NSecretario" DataSetColumn="NSecretario" />
+              <Mapping SourceColumn="NombrePresidente" DataSetColumn="NombrePresidente" />
+              <Mapping SourceColumn="NombreTesorero" DataSetColumn="NombreTesorero" />
+              <Mapping SourceColumn="NombreSecretarioGral" DataSetColumn="NombreSecretarioGral" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BorrarLiga" Modifier="Public" Name="BorrarLiga" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="BorrarLiga">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM Ligas
+WHERE        (Id_Liga = @cadena)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="cadena" ColumnName="Id_Liga" DataSourceName="BL_DB.dbo.Ligas" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cadena" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id_Liga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByMenuFiltrado" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy5" GeneratorSourceName="FillByMenuFiltrado" GetMethodModifier="Public" GetMethodName="GetDataBy5" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="FillByMenuFiltrado">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Ligas.Id_Liga, Ligas.Nombre_de_liga, j.Nombre + ' ' + j.ApellidoPaterno + ' ' + j.ApellidoMaterno AS NPresidente, j2.Nombre + ' ' + j2.ApellidoPaterno + ' ' + j2.ApellidoMaterno AS NTesorero, 
+                         j3.Nombre + ' ' + j3.ApellidoPaterno + ' ' + j3.ApellidoMaterno AS NSecretario, Ligas.NombreBoliche, Ligas.CiudadJuego, Ligas.FechaInicio, Ligas.FechaFinal, Ligas.HoraJuego, Ligas.IndividualOEquipo, Ligas.CantidadEquipos, 
+                         Ligas.NombrePresidente, Ligas.NombreTesorero, Ligas.NombreSecretarioGral
+FROM            Ligas INNER JOIN
+                         Jugadores AS j ON Ligas.NombrePresidente = j.Id_Jugador INNER JOIN
+                         Jugadores AS j2 ON Ligas.NombreTesorero = j2.Id_Jugador INNER JOIN
+                         Jugadores AS j3 ON Ligas.NombreSecretarioGral = j3.Id_Jugador INNER JOIN
+                         Roles ON Roles.Id_liga = Ligas.Id_Liga INNER JOIN
+                         Equipos ON Roles.IdEquipo1 = Equipos.Id_Equipo INNER JOIN
+                         Equipos AS e1 ON Roles.IdEquipo2 = e1.Id_Equipo
+WHERE        (Equipos.Integrante1 = @id) OR
+                         (Equipos.Integrante2 = @id) OR
+                         (Equipos.Integrante3 = @id) OR
+                         (Equipos.Integrante4 = @id) OR
+                         (Equipos.Integrante5 = @id) OR
+                         (Equipos.Suplente1 = @id) OR
+                         (Equipos.Suplente2 = @id) OR
+                         (e1.Integrante1 = @id) OR
+                         (e1.Integrante2 = @id) OR
+                         (e1.Integrante3 = @id) OR
+                         (e1.Integrante4 = @id) OR
+                         (e1.Integrante5 = @id) OR
+                         (e1.Suplente1 = @id) OR
+                         (e1.Suplente2 = @id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="Integrante1" DataSourceName="BL_DB.dbo.Equipos" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Integrante1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillMenu" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy1" GeneratorSourceName="FillMenu" GetMethodModifier="Public" GetMethodName="GetDataBy1" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="FillMenu">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Ligas.CantidadEquipos, Ligas.CiudadJuego, Ligas.FechaFinal, Ligas.FechaInicio, Ligas.HoraJuego, Ligas.Id_Liga, Ligas.IndividualOEquipo, Ligas.NombreBoliche, Ligas.NombrePresidente, Ligas.NombreSecretarioGral, Ligas.NombreTesorero, Ligas.Nombre_de_liga, j.Nombre + ' ' + j.ApellidoPaterno + ' ' + j.ApellidoMaterno AS NPresidente, j3.Nombre + ' ' + j3.ApellidoPaterno + ' ' + j3.ApellidoMaterno AS NSecretario, j2.Nombre + ' ' + j2.ApellidoPaterno + ' ' + j2.ApellidoMaterno AS NTesorero FROM Ligas INNER JOIN Jugadores AS j ON Ligas.NombrePresidente = j.Id_Jugador INNER JOIN Jugadores AS j2 ON Ligas.NombreTesorero = j2.Id_Jugador INNER JOIN Jugadores AS j3 ON Ligas.NombreSecretarioGral = j3.Id_Jugador</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Getnombreliga" Modifier="Public" Name="Getnombreliga" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Getnombreliga">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Nombre_de_liga AS Expr1
+FROM            Ligas
+WHERE        (Id_Liga = @cadena)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="cadena" ColumnName="Id_Liga" DataSourceName="BL_DB.dbo.Ligas" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@cadena" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id_Liga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUltimoid" Modifier="Public" Name="GetUltimoid" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetUltimoid">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        TOP (1) Id_Liga
+FROM            Ligas
+ORDER BY Id_Liga DESC</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NuevaLiga" Modifier="Public" Name="NuevaLiga" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="NuevaLiga">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO Ligas
+                         (Nombre_de_liga, NombreBoliche, CiudadJuego, FechaInicio, FechaFinal, HoraJuego, IndividualOEquipo, CantidadEquipos, NombrePresidente, NombreTesorero, NombreSecretarioGral)
+VALUES        (@Nombreliga,@NombreBol,@Ciudad,@Fechain,@Fechafi,@Hora,@Indiveq,@Cantidad,@president,@Tesor,@Secreta)
+SELECT Id_Liga 
+FROM Ligas
+WHERE Id_Liga = SCOPE_IDENTITY()</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Nombreliga" ColumnName="Nombre_de_liga" DataSourceName="" DataTypeServer="varchar(20)" DbType="AnsiString" Direction="Input" ParameterName="@Nombreliga" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumn="Nombre_de_liga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="NombreBol" ColumnName="NombreBoliche" DataSourceName="" DataTypeServer="varchar(30)" DbType="AnsiString" Direction="Input" ParameterName="@NombreBol" Precision="0" ProviderType="VarChar" Scale="0" Size="30" SourceColumn="NombreBoliche" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Ciudad" ColumnName="CiudadJuego" DataSourceName="" DataTypeServer="varchar(35)" DbType="AnsiString" Direction="Input" ParameterName="@Ciudad" Precision="0" ProviderType="VarChar" Scale="0" Size="35" SourceColumn="CiudadJuego" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fechain" ColumnName="FechaInicio" DataSourceName="" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Fechain" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="FechaInicio" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Fechafi" ColumnName="FechaFinal" DataSourceName="" DataTypeServer="date" DbType="AnsiString" Direction="Input" ParameterName="@Fechafi" Precision="0" ProviderType="Date" Scale="0" Size="3" SourceColumn="FechaFinal" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Hora" ColumnName="HoraJuego" DataSourceName="" DataTypeServer="varchar(15)" DbType="AnsiString" Direction="Input" ParameterName="@Hora" Precision="0" ProviderType="VarChar" Scale="0" Size="15" SourceColumn="HoraJuego" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Indiveq" ColumnName="IndividualOEquipo" DataSourceName="" DataTypeServer="nchar(10)" DbType="String" Direction="Input" ParameterName="@Indiveq" Precision="0" ProviderType="NChar" Scale="0" Size="10" SourceColumn="IndividualOEquipo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Cantidad" ColumnName="CantidadEquipos" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Cantidad" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="CantidadEquipos" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="president" ColumnName="NombrePresidente" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@president" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="NombrePresidente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Tesor" ColumnName="NombreTesorero" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Tesor" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="NombreTesorero" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Secreta" ColumnName="NombreSecretarioGral" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Secreta" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="NombreSecretarioGral" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BL_LigasDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BL_LigasDS" msprop:Generator_UserDSName="BL_LigasDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Ligas" msprop:Generator_TableClassName="LigasDataTable" msprop:Generator_TableVarName="tableLigas" msprop:Generator_TablePropName="Ligas" msprop:Generator_RowDeletingName="LigasRowDeleting" msprop:Generator_RowChangingName="LigasRowChanging" msprop:Generator_RowEvHandlerName="LigasRowChangeEventHandler" msprop:Generator_RowDeletedName="LigasRowDeleted" msprop:Generator_UserTableName="Ligas" msprop:Generator_RowChangedName="LigasRowChanged" msprop:Generator_RowEvArgName="LigasRowChangeEvent" msprop:Generator_RowClassName="LigasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id_Liga" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_Liga" msprop:Generator_ColumnPropNameInRow="Id_Liga" msprop:Generator_ColumnPropNameInTable="Id_LigaColumn" msprop:Generator_UserColumnName="Id_Liga" type="xs:int" />
+              <xs:element name="Nombre_de_liga" msprop:Generator_ColumnVarNameInTable="columnNombre_de_liga" msprop:Generator_ColumnPropNameInRow="Nombre_de_liga" msprop:Generator_ColumnPropNameInTable="Nombre_de_ligaColumn" msprop:Generator_UserColumnName="Nombre_de_liga" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombreBoliche" msprop:Generator_ColumnVarNameInTable="columnNombreBoliche" msprop:Generator_ColumnPropNameInRow="NombreBoliche" msprop:Generator_ColumnPropNameInTable="NombreBolicheColumn" msprop:Generator_UserColumnName="NombreBoliche" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CiudadJuego" msprop:Generator_ColumnVarNameInTable="columnCiudadJuego" msprop:Generator_ColumnPropNameInRow="CiudadJuego" msprop:Generator_ColumnPropNameInTable="CiudadJuegoColumn" msprop:Generator_UserColumnName="CiudadJuego" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="35" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FechaInicio" msprop:Generator_ColumnVarNameInTable="columnFechaInicio" msprop:Generator_ColumnPropNameInRow="FechaInicio" msprop:Generator_ColumnPropNameInTable="FechaInicioColumn" msprop:Generator_UserColumnName="FechaInicio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FechaFinal" msprop:Generator_ColumnVarNameInTable="columnFechaFinal" msprop:Generator_ColumnPropNameInRow="FechaFinal" msprop:Generator_ColumnPropNameInTable="FechaFinalColumn" msprop:Generator_UserColumnName="FechaFinal" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HoraJuego" msprop:Generator_ColumnVarNameInTable="columnHoraJuego" msprop:Generator_ColumnPropNameInRow="HoraJuego" msprop:Generator_ColumnPropNameInTable="HoraJuegoColumn" msprop:Generator_UserColumnName="HoraJuego" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IndividualOEquipo" msprop:Generator_ColumnVarNameInTable="columnIndividualOEquipo" msprop:Generator_ColumnPropNameInRow="IndividualOEquipo" msprop:Generator_ColumnPropNameInTable="IndividualOEquipoColumn" msprop:Generator_UserColumnName="IndividualOEquipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CantidadEquipos" msprop:Generator_ColumnVarNameInTable="columnCantidadEquipos" msprop:Generator_ColumnPropNameInRow="CantidadEquipos" msprop:Generator_ColumnPropNameInTable="CantidadEquiposColumn" msprop:Generator_UserColumnName="CantidadEquipos" type="xs:int" minOccurs="0" />
+              <xs:element name="NPresidente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNPresidente" msprop:Generator_ColumnPropNameInRow="NPresidente" msprop:Generator_ColumnPropNameInTable="NPresidenteColumn" msprop:Generator_UserColumnName="NPresidente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NTesorero" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNTesorero" msprop:Generator_ColumnPropNameInRow="NTesorero" msprop:Generator_ColumnPropNameInTable="NTesoreroColumn" msprop:Generator_UserColumnName="NTesorero" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NSecretario" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNSecretario" msprop:Generator_ColumnPropNameInRow="NSecretario" msprop:Generator_ColumnPropNameInTable="NSecretarioColumn" msprop:Generator_UserColumnName="NSecretario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="92" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NombrePresidente" msprop:Generator_ColumnVarNameInTable="columnNombrePresidente" msprop:Generator_ColumnPropNameInRow="NombrePresidente" msprop:Generator_ColumnPropNameInTable="NombrePresidenteColumn" msprop:Generator_UserColumnName="NombrePresidente" type="xs:int" />
+              <xs:element name="NombreTesorero" msprop:Generator_ColumnVarNameInTable="columnNombreTesorero" msprop:Generator_ColumnPropNameInRow="NombreTesorero" msprop:Generator_ColumnPropNameInTable="NombreTesoreroColumn" msprop:Generator_UserColumnName="NombreTesorero" type="xs:int" />
+              <xs:element name="NombreSecretarioGral" msprop:Generator_ColumnVarNameInTable="columnNombreSecretarioGral" msprop:Generator_ColumnPropNameInRow="NombreSecretarioGral" msprop:Generator_ColumnPropNameInTable="NombreSecretarioGralColumn" msprop:Generator_UserColumnName="NombreSecretarioGral" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Ligas" />
+      <xs:field xpath="mstns:Id_Liga" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
