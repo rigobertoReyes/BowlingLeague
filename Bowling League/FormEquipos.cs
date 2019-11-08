@@ -39,7 +39,7 @@ namespace Bowling_League
             this.jugadoresTableAdapter.Fill(this.bL_DBEquiposDS.Jugadores);
             // TODO: This line of code loads data into the 'bL_DBEquiposDS.Equipos' table. You can move, or remove it, as needed.
             this.equiposTableAdapter.Fill(this.bL_DBEquiposDS.Equipos);
-
+            validarnumero();
             //Poner texto de integrante 1
             nombrei1.Text = "Nombre: " + jugadoresTableAdapter.Getnombre(bL_DBEquiposDS.Equipos[equiposBindingSource.Position].Integrante1);
             numeroi1.Text = "No Jugador: " + jugadoresTableAdapter.Getnumero(bL_DBEquiposDS.Equipos[equiposBindingSource.Position].Integrante1);
@@ -401,6 +401,30 @@ namespace Bowling_League
             FormNuevoEquipo ne = new FormNuevoEquipo();
             ne.ShowDialog();
             this.equiposTableAdapter.Fill(this.bL_DBEquiposDS.Equipos);
+        }
+
+        private void no_EquipoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            validarnumero();
+        }
+        private void validarnumero()
+        {
+            try
+            {
+                bool ismynumber = Convert.ToInt32(no_EquipoTextBox.Text) == bL_DBEquiposDS.Equipos[equiposBindingSource.Position].No_Equipo;
+                if (ismynumber || equiposTableAdapter.Existsnumero(Convert.ToInt32(no_EquipoTextBox.Text)) == 0)
+                {
+                    Validacion.SetHighlightColor(no_EquipoTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Green);
+                }
+                else if (equiposTableAdapter.Existsnumero(Convert.ToInt32(no_EquipoTextBox.Text)) == 1)
+                {
+                    Validacion.SetHighlightColor(no_EquipoTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
+                }
+            }
+            catch (Exception)
+            {
+                Validacion.SetHighlightColor(no_EquipoTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.None);
+            }
         }
     }
 }

@@ -73,20 +73,19 @@ namespace Bowling_League
             {
                 if (jugadoresTableAdapter.ExistNumJugador(Convert.ToInt32(no_jugadorTextBox.Text)) == 1)
                 {
-                    no_jugadorTextBox.BackColor = Color.Red;
-                    no_jugadorTextBox.ForeColor = Color.White;
+                    Validacion.SetHighlightColor(no_jugadorTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
+         
                 }
                 else if (jugadoresTableAdapter.ExistNumJugador(Convert.ToInt32(no_jugadorTextBox.Text)) == 0)
                 {
-                    no_jugadorTextBox.BackColor = Color.Lime;
-                    no_jugadorTextBox.ForeColor = Color.White;
+                    Validacion.SetHighlightColor(no_jugadorTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Green);
+                  
                 }
             }
             catch (Exception)
             {
-
-                no_jugadorTextBox.BackColor = SystemColors.Window;
-                no_jugadorTextBox.ForeColor = SystemColors.WindowText;
+                Validacion.SetHighlightColor(no_jugadorTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.None);
+                
             }
         }
     }

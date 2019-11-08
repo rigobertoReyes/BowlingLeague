@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using System.IO;
 
 namespace Bowling_League
 {
@@ -64,6 +67,26 @@ namespace Bowling_League
         private void button1_Click(object sender, EventArgs e)
         {
             Buscar();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "PDF Files|*.pdf";
+            dlg.FilterIndex = 0;
+
+            string fileName = string.Empty;
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                fileName = dlg.FileName;
+
+                Document myDocument = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
+                PdfWriter.GetInstance(myDocument, new FileStream(fileName, FileMode.Create));
+                myDocument.Open();
+                myDocument.Add(new Paragraph("ID:"));
+                myDocument.Close();
+            }
         }
     }
 }

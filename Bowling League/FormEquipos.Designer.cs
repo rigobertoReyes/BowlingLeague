@@ -76,6 +76,7 @@
             this.tableAdapterManager = new Bowling_League.BL_DBEquiposDSTableAdapters.TableAdapterManager();
             this.jugadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jugadoresTableAdapter = new Bowling_League.BL_DBEquiposDSTableAdapters.JugadoresTableAdapter();
+            this.Validacion = new DevComponents.DotNetBar.Validator.Highlighter();
             no_EquipoLabel = new System.Windows.Forms.Label();
             nombre_de_equipoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.equiposDataGridView)).BeginInit();
@@ -205,10 +206,11 @@
             // no_EquipoTextBox
             // 
             this.no_EquipoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.equiposBindingSource, "No_Equipo", true));
-            this.no_EquipoTextBox.Location = new System.Drawing.Point(102, 43);
+            this.no_EquipoTextBox.Location = new System.Drawing.Point(98, 43);
             this.no_EquipoTextBox.Name = "no_EquipoTextBox";
             this.no_EquipoTextBox.Size = new System.Drawing.Size(165, 20);
             this.no_EquipoTextBox.TabIndex = 16;
+            this.no_EquipoTextBox.TextChanged += new System.EventHandler(this.no_EquipoTextBox_TextChanged);
             // 
             // groupBox8
             // 
@@ -600,6 +602,10 @@
             // 
             this.jugadoresTableAdapter.ClearBeforeFill = true;
             // 
+            // Validacion
+            // 
+            this.Validacion.ContainerControl = this.groupBox1;
+            // 
             // Equipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,5 +694,6 @@
         private System.Windows.Forms.TextBox nombre_de_equipoTextBox;
         private System.Windows.Forms.TextBox no_EquipoTextBox;
         private System.Windows.Forms.Button button1;
+        private DevComponents.DotNetBar.Validator.Highlighter Validacion;
     }
 }

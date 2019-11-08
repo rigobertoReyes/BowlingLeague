@@ -68,6 +68,7 @@
             this.equiposTableAdapter = new Bowling_League.BL_DBEquiposDSTableAdapters.EquiposTableAdapter();
             this.tableAdapterManager = new Bowling_League.BL_DBEquiposDSTableAdapters.TableAdapterManager();
             this.label6 = new System.Windows.Forms.Label();
+            this.Validacion = new DevComponents.DotNetBar.Validator.Highlighter();
             nombre_de_equipoLabel = new System.Windows.Forms.Label();
             no_EquipoLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -507,6 +508,10 @@
             this.label6.TabIndex = 57;
             this.label6.Text = "Nuevo Equipo";
             // 
+            // Validacion
+            // 
+            this.Validacion.ContainerControl = this;
+            // 
             // FormNuevoEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -582,5 +587,6 @@
         private BL_DBEquiposDSTableAdapters.EquiposTableAdapter equiposTableAdapter;
         private BL_DBEquiposDSTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label6;
+        private DevComponents.DotNetBar.Validator.Highlighter Validacion;
     }
 }

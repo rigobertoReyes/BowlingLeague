@@ -78,6 +78,7 @@
             this.nmHGS = new System.Windows.Forms.NumericUpDown();
             this.nmHandycap = new System.Windows.Forms.NumericUpDown();
             this.nmPinosEnt = new System.Windows.Forms.NumericUpDown();
+            this.Validacion = new DevComponents.DotNetBar.Validator.Highlighter();
             no_jugadorLabel = new System.Windows.Forms.Label();
             puestoDelJugadorLabel = new System.Windows.Forms.Label();
             sexoLabel = new System.Windows.Forms.Label();
@@ -649,12 +650,16 @@
             this.nmPinosEnt.Size = new System.Drawing.Size(120, 20);
             this.nmPinosEnt.TabIndex = 41;
             // 
+            // Validacion
+            // 
+            this.Validacion.ContainerControl = this;
+            // 
             // FormNuevoJugador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(432, 785);
+            this.ClientSize = new System.Drawing.Size(436, 785);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.button1);
@@ -719,5 +724,6 @@
         private System.Windows.Forms.NumericUpDown nmHGS;
         private System.Windows.Forms.NumericUpDown nmHandycap;
         private System.Windows.Forms.NumericUpDown nmPinosEnt;
+        private DevComponents.DotNetBar.Validator.Highlighter Validacion;
     }
 }

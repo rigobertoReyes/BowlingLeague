@@ -204,26 +204,26 @@ namespace Bowling_League
 
         private void no_EquipoTextBox_TextChanged(object sender, EventArgs e)
         {
+            validarnumero();          
+        }
+        private void validarnumero()
+        {
             try
             {
-                if (equiposTableAdapter.Existsnumero(Convert.ToInt32(no_EquipoTextBox.Text)) == 1)
+
+                if (equiposTableAdapter.Existsnumero(Convert.ToInt32(no_EquipoTextBox.Text)) == 0)
                 {
-                    no_EquipoTextBox.BackColor = Color.Red;
-                    no_EquipoTextBox.ForeColor = Color.White;
+                    Validacion.SetHighlightColor(no_EquipoTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Green);
                 }
-                else if (equiposTableAdapter.Existsnumero(Convert.ToInt32(no_EquipoTextBox.Text)) == 0)
+                else if (equiposTableAdapter.Existsnumero(Convert.ToInt32(no_EquipoTextBox.Text)) == 1)
                 {
-                    no_EquipoTextBox.BackColor = Color.Lime;
-                    no_EquipoTextBox.ForeColor = Color.White;
+                    Validacion.SetHighlightColor(no_EquipoTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
                 }
             }
             catch (Exception)
             {
-                no_EquipoTextBox.BackColor = SystemColors.Window;
-                no_EquipoTextBox.ForeColor = SystemColors.WindowText;
+                Validacion.SetHighlightColor(no_EquipoTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.None);
             }
-            
-           
         }
     }
 }

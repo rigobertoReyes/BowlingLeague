@@ -113,21 +113,22 @@ namespace Bowling_League
             {
                 //Revisar que el numero de jugador ingresado sea igual al que tiene actualmente para descartarlo de la comparacion
                 bool ismynumber = Convert.ToInt32(no_jugadorTextBox.Text) == bL_DBDataSet.Jugadores[jugadoresBindingSource.Position].No_jugador;
-                if (jugadoresTableAdapter.ExistNumJugador(Convert.ToInt32(no_jugadorTextBox.Text)) == 1)
+                if (jugadoresTableAdapter.ExistNumJugador(Convert.ToInt32(no_jugadorTextBox.Text)) == 0 || ismynumber)
                 {
-                    no_jugadorTextBox.BackColor = Color.Red;
-                    no_jugadorTextBox.ForeColor = Color.White;
+                    Validacion.SetHighlightColor(no_jugadorTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Green);
+                   
                 }
-                else if (jugadoresTableAdapter.ExistNumJugador(Convert.ToInt32(no_jugadorTextBox.Text)) == 0 || ismynumber)
+                else if (jugadoresTableAdapter.ExistNumJugador(Convert.ToInt32(no_jugadorTextBox.Text)) == 1)
                 {
-                    no_jugadorTextBox.BackColor = Color.Lime;
-                    no_jugadorTextBox.ForeColor = Color.White;
+                    Validacion.SetHighlightColor(no_jugadorTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.Red);
+                   
                 }
+                
             }
             catch (Exception)
             {
-
-                throw;
+                Validacion.SetHighlightColor(no_jugadorTextBox, DevComponents.DotNetBar.Validator.eHighlightColor.None);
+               
             }
         }
     }
