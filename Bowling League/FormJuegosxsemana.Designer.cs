@@ -2217,7 +2217,7 @@
             this.btnGuardar.Location = new System.Drawing.Point(946, 872);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(90, 35);
-            this.btnGuardar.TabIndex = 1;
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -2230,7 +2230,7 @@
             this.button2.Location = new System.Drawing.Point(850, 872);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(90, 35);
-            this.button2.TabIndex = 0;
+            this.button2.TabIndex = 1;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);

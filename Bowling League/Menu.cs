@@ -29,13 +29,12 @@ namespace Bowling_League
             {
                 if (Permiso !="Administrador")
                 {
-                    //No dejara eliminar ligas a los usuarios que no sean administradores
+                    button1.Visible = false;
+                    button2.Visible = false;
+                    button5.Visible = false;
                     btnEliminarLiga.Visible = false;
                 }
-                else //Si es administrador se le mostraran todas las ligas sin filtros
-                {
-                    
-                }
+                
             }
             else
             {
@@ -47,8 +46,6 @@ namespace Bowling_League
                 button5.Visible = false;
                 button6.Visible = false;
                 btnEliminarLiga.Visible = false;
-                
-
             }
             //Cargar datos de la liga con la primer liga enlistada
             idliga = bL_LigasDS.Ligas[ligasBindingSource.Position].Id_Liga;

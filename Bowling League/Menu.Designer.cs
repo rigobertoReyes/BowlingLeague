@@ -85,10 +85,10 @@
             this.button1.BackColor = System.Drawing.Color.RoyalBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(154, 16);
+            this.button1.Location = new System.Drawing.Point(418, 18);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(110, 38);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 5;
             this.button1.Text = "Nueva Liga";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -98,10 +98,10 @@
             this.button2.BackColor = System.Drawing.Color.RoyalBlue;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(279, 16);
+            this.button2.Location = new System.Drawing.Point(543, 18);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 38);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Jugadores";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -111,10 +111,10 @@
             this.button3.BackColor = System.Drawing.Color.RoyalBlue;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(496, 16);
+            this.button3.Location = new System.Drawing.Point(150, 18);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 38);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 3;
             this.button3.Text = "Roles";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -143,7 +143,7 @@
             this.btnEliminarLiga.Location = new System.Drawing.Point(679, 292);
             this.btnEliminarLiga.Name = "btnEliminarLiga";
             this.btnEliminarLiga.Size = new System.Drawing.Size(107, 36);
-            this.btnEliminarLiga.TabIndex = 2;
+            this.btnEliminarLiga.TabIndex = 1;
             this.btnEliminarLiga.Text = "Eliminar Liga";
             this.btnEliminarLiga.UseVisualStyleBackColor = false;
             this.btnEliminarLiga.Click += new System.EventHandler(this.btnEliminarLiga_Click);
@@ -511,10 +511,10 @@
             this.button5.BackColor = System.Drawing.Color.RoyalBlue;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button5.Location = new System.Drawing.Point(386, 16);
+            this.button5.Location = new System.Drawing.Point(650, 18);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(94, 38);
-            this.button5.TabIndex = 9;
+            this.button5.TabIndex = 7;
             this.button5.Text = "Equipos";
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
@@ -524,10 +524,10 @@
             this.button6.BackColor = System.Drawing.Color.RoyalBlue;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button6.Location = new System.Drawing.Point(606, 16);
+            this.button6.Location = new System.Drawing.Point(260, 18);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(143, 38);
-            this.button6.TabIndex = 10;
+            this.button6.TabIndex = 4;
             this.button6.Text = "Juego Semanal";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -551,7 +551,7 @@
             this.button4.Location = new System.Drawing.Point(767, 12);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(51, 47);
-            this.button4.TabIndex = 7;
+            this.button4.TabIndex = 8;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -563,7 +563,7 @@
             this.button7.Location = new System.Drawing.Point(25, 16);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(110, 43);
-            this.button7.TabIndex = 11;
+            this.button7.TabIndex = 2;
             this.button7.Text = "Tabla de posiciones";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);

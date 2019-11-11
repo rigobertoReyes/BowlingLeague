@@ -68,7 +68,38 @@ namespace Bowling_League
         {
             Buscar();
         }
-
+        public string diasemana(DateTime fec)
+        {
+            if (fec.ToString("ddd") == "Mon")
+            {
+                return "Lunes";
+            }
+            else if (fec.ToString("ddd") == "Tue")
+            {
+                return "Martes";
+            }
+            else if (fec.ToString("ddd") == "Wed")
+            {
+                return "Miercoles";
+            }
+            else if (fec.ToString("ddd") == "Thu")
+            {
+                return "Jueves";
+            }
+            else if (fec.ToString("ddd") == "Fri")
+            {
+                return "Viernes";
+            }
+            else if (fec.ToString("ddd") == "Sat")
+            {
+                return "Sabado";
+            }
+            else if (fec.ToString("ddd") == "Sun")
+            {
+                return "Domingo";
+            }
+            return "Dia";
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             SaveFileDialog dlg = new SaveFileDialog();
@@ -81,12 +112,135 @@ namespace Bowling_League
             {
                 fileName = dlg.FileName;
 
-                Document myDocument = new Document(iTextSharp.text.PageSize.A4, 10, 10, 42, 35);
-                PdfWriter.GetInstance(myDocument, new FileStream(fileName, FileMode.Create));
+                Document myDocument = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 12, 35);
+                PdfWriter pw = PdfWriter.GetInstance(myDocument, new FileStream(fileName, FileMode.Create));
                 myDocument.Open();
-                myDocument.Add(new Paragraph("ID:"));
+
+                //myDocument.Add(imagen);
+                //HEADER
+                
+                iTextSharp.text.Image imagen = iTextSharp.text.Image.GetInstance("Logo.png");
+                float percentage = 0.0f;
+                percentage = 80 / imagen.Width;
+                imagen.ScalePercent(percentage * 100);
+                PdfPCell icell = new PdfPCell(imagen);
+                icell.Border = 0;
+                
+                PdfPTable tbHeader = new PdfPTable(3);
+                tbHeader.WidthPercentage = 100f;
+                tbHeader.DefaultCell.Border = 0;
+                tbHeader.AddCell(icell);
+                
+                //Titulo
+                BaseFont bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+                iTextSharp.text.Font fontText = new iTextSharp.text.Font(bf, 18, 1, BaseColor.BLACK);
+                string nombreliga = ligasTableAdapter.Getnombreliga(idliga);
+                PdfPCell hcell = new PdfPCell(new Paragraph("\n"+nombreliga+"\nResultados Sem. #"+cbSemana.Text, fontText));
+                hcell.HorizontalAlignment = Element.ALIGN_CENTER;
+                hcell.Border = 0;
+                tbHeader.AddCell(hcell);
+
+                //Info de la liga
+                bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+                fontText = new iTextSharp.text.Font(bf, 10, 2, BaseColor.BLACK);
+                //Nombre del boliche
+                //Ciudad + estado
+                //Presidente
+                string boliche = ligasTableAdapter.GetBoliche(idliga);
+                string city = ligasTableAdapter.GetCiudadJuego(idliga);
+                string presi = ligasTableAdapter.GetPresidente(idliga).ToString();
+                DateTime dat = Convert.ToDateTime(ligasTableAdapter.GetFechaInicio(idliga));
+
+                string fechahora = diasemana(dat)+" "+ligasTableAdapter.Gethora(idliga);
+                hcell = new PdfPCell(new Paragraph("\n\n" + boliche + "\n" + city+" "+fechahora+"\nPte. "+ presi, fontText));
+                hcell.HorizontalAlignment = Element.ALIGN_RIGHT;
+                hcell.Border = 0;
+                tbHeader.AddCell(hcell);
+
+                myDocument.Add(tbHeader);
+                //Crea una tabla de 9 columnas referentes a la del datagridview
+                PdfPTable table = new PdfPTable(9);
+                table.WidthPercentage = 90f;
+                //Elegir tipo de letra, tipo de texto y color, EMBEDDED es para la compatibilidad del font en otros equipos
+
+                #region para la primer colmna
+                bf = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1250, BaseFont.EMBEDDED);
+                fontText = new iTextSharp.text.Font(bf, 10, 0, BaseColor.WHITE);
+                PdfPCell cell = new PdfPCell();
+
+                cell = new PdfPCell(new Paragraph("Posicion", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112,173,71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("Equipo", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("Total Juegos Ganados", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("Total Juegos Perdidos", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("Total Pinos Acumulados", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("JG Ultima Semana", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("JP Ultima Semana", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("Juego Alto", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+
+                cell = new PdfPCell(new Paragraph("Serie Alta", fontText));
+                cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                cell.BackgroundColor = new BaseColor(112, 173, 71);
+                table.AddCell(cell);
+                #endregion
+
+                
+                iTextSharp.text.Font fontText1 = new iTextSharp.text.Font(bf, 10, 0, BaseColor.BLACK);
+
+                for (int i = 0; i < ligas_DetalleXEquiposDataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        cell = new PdfPCell(new Paragraph(ligas_DetalleXEquiposDataGridView.Rows[i].Cells[j].Value.ToString(), fontText1));
+                        cell.HorizontalAlignment = Element.ALIGN_CENTER;
+                        cell.BackgroundColor = new BaseColor(204, 255, 153);
+                        table.AddCell(cell);
+                    }
+                    
+
+                }
+
+                
+
+
+                myDocument.Add(table);
                 myDocument.Close();
+
+                FormVistaPreviaReporte vp = new FormVistaPreviaReporte();
+                vp.file = fileName;
+                vp.ShowDialog();
             }
         }
     }
+    
 }
