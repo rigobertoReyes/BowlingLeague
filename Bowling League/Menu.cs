@@ -17,7 +17,7 @@ namespace Bowling_League
             InitializeComponent();
         }
         public string Permiso = "Administrador";
-        public int idjugaodr = 0;
+        public int idjugador = 0;
         public int idliga = 0;
         private void Menu_Load(object sender, EventArgs e)
         {
@@ -175,24 +175,44 @@ namespace Bowling_League
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //Abrir modulo para roles de juego
-            this.Hide();
-            FormRoles ro = new FormRoles();
-            ro.FormClosed += (s, args) => this.Close();
-            ro.Permiso = Permiso;
-            ro.idliga = idliga;
-            ro.Show();
+            //Si el presidente,tesorero o secretario esta registrado en esa liga, puede editar los roles
+            if (ligasTableAdapter.JugadorEnLaliga(idjugador, bL_LigasDS.Ligas[ligasBindingSource.Position].Id_Liga) == 1 || Permiso == "Administrador")
+            {
+                //Abrir modulo para roles de juego
+                this.Hide();
+                FormRoles ro = new FormRoles();
+                ro.idjugador = idjugador;
+                ro.FormClosed += (s, args) => this.Close();
+                ro.Permiso = Permiso;
+                ro.idliga = idliga;
+                ro.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede editar, esta liga ya que no es representante de ella");
+            }
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //Abrir modulo para roles de juego
-            this.Hide();
-            FormJuegosxsemana ro = new FormJuegosxsemana();
-            ro.FormClosed += (s, args) => this.Close();
-            ro.Permiso = Permiso;
-            ro.idliga = idliga;
-            ro.Show();
+            //Si el presidente,tesorero o secretario esta registrado en esa liga, puede editar los juegos por semana
+            if (ligasTableAdapter.JugadorEnLaliga(idjugador, bL_LigasDS.Ligas[ligasBindingSource.Position].Id_Liga) == 1 || Permiso == "Administrador")
+            {
+                //Abrir modulo para roles de juego
+                this.Hide();
+                FormJuegosxsemana ro = new FormJuegosxsemana();
+                ro.idjugador = idjugador;
+                ro.FormClosed += (s, args) => this.Close();
+                ro.Permiso = Permiso;
+                ro.idliga = idliga;
+                ro.Show();
+            }
+            else
+            {
+                MessageBox.Show("No se puede editar, esta liga ya que no es representante de ella");
+            }
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -200,6 +220,7 @@ namespace Bowling_League
             //Abrir modulo para Detallesxequipos
             this.Hide();
             FormLigasDetalles ro = new FormLigasDetalles();
+            ro.idjugador = idjugador;
             ro.FormClosed += (s, args) => this.Close();
             ro.Permiso = Permiso;
             ro.idliga = idliga;

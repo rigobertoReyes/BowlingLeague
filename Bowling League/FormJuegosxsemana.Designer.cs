@@ -2283,6 +2283,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.lblequipo1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormJuegosxsemana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Juegos por semana";

@@ -35,7 +35,7 @@ namespace Bowling_League
                 {
                     this.Hide();
                     Menu m = new Menu();
-                    
+                    m.idjugador = Convert.ToInt16( jugadoresTableAdapter.GetIdJugador(Convert.ToInt16(txtNumero.Text)));
                     m.Permiso = jugadoresTableAdapter.GetPuesto(Convert.ToInt16(txtNumero.Text), txtPass.Text).ToString();
                     m.FormClosed += (s, args) => this.Close();
                     m.Show();

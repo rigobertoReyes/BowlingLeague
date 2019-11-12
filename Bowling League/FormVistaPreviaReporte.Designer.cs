@@ -62,6 +62,7 @@
             this.ClientSize = new System.Drawing.Size(798, 665);
             this.Controls.Add(this.lblliga);
             this.Controls.Add(this.axAcroPDF1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormVistaPreviaReporte";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vista Previa";

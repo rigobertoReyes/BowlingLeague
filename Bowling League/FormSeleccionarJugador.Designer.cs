@@ -212,6 +212,7 @@
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.jugadoresDataGridView);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormSeleccionarJugador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSeleccionarJugador";

@@ -24,6 +24,7 @@ namespace Bowling_League
         public int idliga = 0;
         public string Permiso = "";
         int idrol = 0;
+        public int idjugador = 0;
         public void Buscar()
         {
             //Obtener el primer idrol de la semana seleccionada
@@ -59,6 +60,7 @@ namespace Bowling_League
         {
             this.Hide();
             Menu m = new Menu();
+            m.idjugador = idjugador;
             m.Permiso = Permiso;
             m.FormClosed += (s, args) => this.Close();
             m.Show();

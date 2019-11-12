@@ -21,6 +21,7 @@ namespace Bowling_League
         {
             this.Hide();
             Menu m = new Menu();
+            m.idjugador = idjugador;
             m.Permiso = Permiso;
             m.FormClosed += (s, args) => this.Close();
             m.Show();
@@ -29,7 +30,7 @@ namespace Bowling_League
         public string Permiso = "";
         public int idliga = 0;
         int ideq1 = 0, ideq2 = 0;
-
+        public int idjugador = 0;
         private void FormRoles_Load(object sender, EventArgs e)
         {
             
@@ -120,6 +121,26 @@ namespace Bowling_League
             else if ( eq1 != 0 || eq2 != 0)
             {
                 MessageBox.Show("Ya hay equipos asignados a este rol de juegos, favor de seleccionar otro");
+                ideq1 = Convert.ToInt16(rolesTableAdapter.GetidEquipo1(idrol));
+                if (ideq1 == 0)
+                {
+                    txtEquipo1.Text = "Sin asignar";
+                }
+                else
+                {
+                    txtEquipo1.Text = rolesTableAdapter.GetnombreEquipo1(idrol).ToString();
+                }
+
+                //Capturar id de equipo 2 y mostrar el nombre en el textbox
+                ideq2 = Convert.ToInt16(rolesTableAdapter.GetidEquipo2(idrol));
+                if (ideq2 == 0)
+                {
+                    txtEquipo2.Text = "Sin asignar";
+                }
+                else
+                {
+                    txtEquipo2.Text = rolesTableAdapter.GetnombreEquipo2(idrol).ToString();
+                }
             }
             else
             {

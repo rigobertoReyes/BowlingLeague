@@ -28,7 +28,7 @@ namespace Bowling_League
         private void FormNuevoJugador_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'bL_DBDataSet.Jugadores' table. You can move, or remove it, as needed.
-            this.jugadoresTableAdapter.Fill(this.bL_DBDataSet.Jugadores);
+            //this.jugadoresTableAdapter.Fill(this.bL_DBDataSet.Jugadores);
 
         }
 

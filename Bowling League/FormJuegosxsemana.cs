@@ -18,6 +18,7 @@ namespace Bowling_League
         }
         public int idrol = 0;
         public string Permiso = "";
+        public int idjugador = 0;
         public int idliga = 0;
         int ideq1 = 0, ideq2 = 0;
         int jueq1j1,
@@ -46,6 +47,7 @@ namespace Bowling_League
         {
             this.Hide();
             Menu m = new Menu();
+            m.idjugador = idjugador;
             m.Permiso = Permiso;
             m.FormClosed += (s, args) => this.Close();
             m.Show();

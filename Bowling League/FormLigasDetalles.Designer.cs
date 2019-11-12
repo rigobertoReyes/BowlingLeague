@@ -36,6 +36,15 @@
             this.ligas_DetalleXEquiposTableAdapter = new Bowling_League.BL_LigasDetallesTableAdapters.Ligas_DetalleXEquiposTableAdapter();
             this.tableAdapterManager = new Bowling_League.BL_LigasDetallesTableAdapters.TableAdapterManager();
             this.ligas_DetalleXEquiposDataGridView = new System.Windows.Forms.DataGridView();
+            this.Posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblfecha = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.cbSemana = new System.Windows.Forms.ComboBox();
@@ -50,15 +59,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.bL_LigasDetalles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ligas_DetalleXEquiposBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ligas_DetalleXEquiposDataGridView)).BeginInit();
@@ -135,6 +135,70 @@
             this.ligas_DetalleXEquiposDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ligas_DetalleXEquiposDataGridView.Size = new System.Drawing.Size(875, 350);
             this.ligas_DetalleXEquiposDataGridView.TabIndex = 53;
+            // 
+            // Posicion
+            // 
+            this.Posicion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.Posicion.HeaderText = "Posicion";
+            this.Posicion.Name = "Posicion";
+            this.Posicion.ReadOnly = true;
+            this.Posicion.Width = 72;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Nombre_de_equipo";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Equipo";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Total_Juegos_Ganados";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Total Juegos Ganados";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Total_Juegos_Perdidos";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Total Juegos Perdidos";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Total_Pinos_Acumulados";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Total Pinos Acumulados";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "JG_Ultima_Semana";
+            this.dataGridViewTextBoxColumn8.HeaderText = "JG Ultima Semana";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "JP_Ultima_Semana";
+            this.dataGridViewTextBoxColumn9.HeaderText = "JP Ultima Semana";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Juego_Alto";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Juego Alto";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Serie_Alta";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Serie Alta";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
             // lblfecha
             // 
@@ -244,70 +308,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Posicion
-            // 
-            this.Posicion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Posicion.HeaderText = "Posicion";
-            this.Posicion.Name = "Posicion";
-            this.Posicion.ReadOnly = true;
-            this.Posicion.Width = 72;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Nombre_de_equipo";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Equipo";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Total_Juegos_Ganados";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Total Juegos Ganados";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Total_Juegos_Perdidos";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Total Juegos Perdidos";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Total_Pinos_Acumulados";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Total Pinos Acumulados";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "JG_Ultima_Semana";
-            this.dataGridViewTextBoxColumn8.HeaderText = "JG Ultima Semana";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "JP_Ultima_Semana";
-            this.dataGridViewTextBoxColumn9.HeaderText = "JP Ultima Semana";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Juego_Alto";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Juego Alto";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Serie_Alta";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Serie Alta";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            // 
             // FormLigasDetalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,6 +322,7 @@
             this.Controls.Add(this.cbSemana);
             this.Controls.Add(this.ligas_DetalleXEquiposDataGridView);
             this.Controls.Add(this.lblliga);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormLigasDetalles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalles por equipos";

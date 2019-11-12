@@ -94,7 +94,7 @@ WHERE        (Equipos.Integrante1 = @id) OR
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetBoliche" Modifier="Public" Name="GetBoliche" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="GetBoliche">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetBoliche" Modifier="Public" Name="GetBoliche" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="GetBoliche">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        NombreBoliche AS Expr1
@@ -106,7 +106,7 @@ WHERE        (Id_Liga = @cadena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetCiudadJuego" Modifier="Public" Name="GetCiudadJuego" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="GetCiudadJuego">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetCiudadJuego" Modifier="Public" Name="GetCiudadJuego" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetCiudadJuego">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        CiudadJuego AS Expr1
@@ -118,7 +118,7 @@ WHERE        (Id_Liga = @cadena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetFechaInicio" Modifier="Public" Name="GetFechaInicio" QueryType="Scalar" ScalarCallRetval="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="GetFechaInicio">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetFechaInicio" Modifier="Public" Name="GetFechaInicio" QueryType="Scalar" ScalarCallRetval="System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="GetFechaInicio">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        FechaInicio AS Expr1
@@ -130,7 +130,7 @@ WHERE        (Id_Liga = @cadena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Gethora" Modifier="Public" Name="Gethora" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="Gethora">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Gethora" Modifier="Public" Name="Gethora" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="Gethora">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        HoraJuego AS Expr1
@@ -142,7 +142,7 @@ WHERE        (Id_Liga = @cadena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Getnombreliga" Modifier="Public" Name="Getnombreliga" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="Getnombreliga">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="Getnombreliga" Modifier="Public" Name="Getnombreliga" QueryType="Scalar" ScalarCallRetval="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="Getnombreliga">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Nombre_de_liga AS Expr1
@@ -154,7 +154,7 @@ WHERE        (Id_Liga = @cadena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetPresidente" Modifier="Public" Name="GetPresidente" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="GetPresidente">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="GetPresidente" Modifier="Public" Name="GetPresidente" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="GetPresidente">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        Jugadores.Nombre + ' ' + Jugadores.ApellidoPaterno + ' ' + Jugadores.ApellidoMaterno AS Expr1
@@ -167,7 +167,7 @@ WHERE        (Ligas.Id_Liga = @cadena)</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUltimoid" Modifier="Public" Name="GetUltimoid" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="GetUltimoid">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="BL_DB.dbo.Ligas" DbObjectType="Table" GenerateShortCommands="true" GeneratorSourceName="GetUltimoid" Modifier="Public" Name="GetUltimoid" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="GetUltimoid">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT        TOP (1) Id_Liga
@@ -177,7 +177,22 @@ ORDER BY Id_Liga DESC</CommandText>
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
-              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NuevaLiga" Modifier="Public" Name="NuevaLiga" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="NuevaLiga">
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="JugadorEnLaliga" Modifier="Public" Name="JugadorEnLaliga" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="JugadorEnLaliga">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        COUNT(*) AS Expr1
+FROM            Ligas
+WHERE        (NombrePresidente = @idjugador) AND (Id_Liga = @liga) OR
+                         (NombreTesorero = @idjugador) AND (Id_Liga = @liga) OR
+                         (NombreSecretarioGral = @idjugador) AND (Id_Liga = @liga)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="idjugador" ColumnName="NombrePresidente" DataSourceName="BL_DB.dbo.Ligas" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@idjugador" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="NombrePresidente" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="liga" ColumnName="Id_Liga" DataSourceName="BL_DB.dbo.Ligas" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@liga" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id_Liga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="BL_DBConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="NuevaLiga" Modifier="Public" Name="NuevaLiga" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="NuevaLiga">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO Ligas
@@ -212,7 +227,7 @@ WHERE Id_Liga = SCOPE_IDENTITY()</CommandText>
   <xs:element name="BL_LigasDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BL_LigasDS" msprop:Generator_UserDSName="BL_LigasDS">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Ligas" msprop:Generator_TableClassName="LigasDataTable" msprop:Generator_TableVarName="tableLigas" msprop:Generator_RowChangedName="LigasRowChanged" msprop:Generator_TablePropName="Ligas" msprop:Generator_RowDeletingName="LigasRowDeleting" msprop:Generator_RowChangingName="LigasRowChanging" msprop:Generator_RowEvHandlerName="LigasRowChangeEventHandler" msprop:Generator_RowDeletedName="LigasRowDeleted" msprop:Generator_RowClassName="LigasRow" msprop:Generator_UserTableName="Ligas" msprop:Generator_RowEvArgName="LigasRowChangeEvent">
+        <xs:element name="Ligas" msprop:Generator_TableClassName="LigasDataTable" msprop:Generator_TableVarName="tableLigas" msprop:Generator_TablePropName="Ligas" msprop:Generator_RowDeletingName="LigasRowDeleting" msprop:Generator_RowChangingName="LigasRowChanging" msprop:Generator_RowEvHandlerName="LigasRowChangeEventHandler" msprop:Generator_RowDeletedName="LigasRowDeleted" msprop:Generator_UserTableName="Ligas" msprop:Generator_RowChangedName="LigasRowChanged" msprop:Generator_RowEvArgName="LigasRowChangeEvent" msprop:Generator_RowClassName="LigasRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id_Liga" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId_Liga" msprop:Generator_ColumnPropNameInRow="Id_Liga" msprop:Generator_ColumnPropNameInTable="Id_LigaColumn" msprop:Generator_UserColumnName="Id_Liga" type="xs:int" />
